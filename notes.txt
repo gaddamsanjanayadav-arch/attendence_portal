@@ -1,0 +1,20 @@
+pytz for current date and time for our region as asian
+
+using supabase for storing the data
+
+os is sued to connect our os file
+
+ pandas for accessing the dataframes
+
+ if we can store all the data in github then why supabase?
+ streamlit app goes 24hr after inactive and stores data in session memory if it goes to sleep data may 
+ get lost but supabase uses session memory so no worry of dat lost
+
+
+modular proj :python :
+2 main files we have 2 one for admin and another for student
+why modularizing future may project become to big so handling can be easy
+
+logger : watchman of our prog 
+expection handling : to avoid any expections or errors
+
