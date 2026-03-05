@@ -64,3 +64,69 @@ Traceback (most recent call last):
   File "C:\Users\gadda\AppData\Roaming\Python\Python313\site-packages\github\Requester.py", line 853, in __check
     raise self.createException(status, responseHeaders, data)
 github.GithubException.UnknownObjectException: 404 {"message": "Not Found", "documentation_url": "https://docs.github.com/rest", "status": "404"}
+2026-03-06 00:12:35,515 | ERROR | Attendence.clients | clients.py:42 | create_github_repo() | Failed to create GitHub repo client
+Traceback (most recent call last):
+  File "C:\Users\gadda\OneDrive\Desktop\projects\gen_attendence\Attendence\clients.py", line 39, in create_github_repo
+    repo = gh.get_user(username).get_repo(repo_name)
+           ~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\gadda\AppData\Roaming\Python\Python313\site-packages\github\MainClass.py", line 413, in get_user
+    return github.NamedUser.NamedUser(self.__requester, url=url).complete()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gadda\AppData\Roaming\Python\Python313\site-packages\github\GithubObject.py", line 569, in __init__
+    self.complete()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\gadda\AppData\Roaming\Python\Python313\site-packages\github\GithubObject.py", line 601, in complete
+    self._completeIfNeeded()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\gadda\AppData\Roaming\Python\Python313\site-packages\github\GithubObject.py", line 610, in _completeIfNeeded
+    self.__complete()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\gadda\AppData\Roaming\Python\Python313\site-packages\github\GithubObject.py", line 615, in __complete
+    headers, data = self._requester.requestJsonAndCheck("GET", self._url.value, headers=self.__completeHeaders)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gadda\AppData\Roaming\Python\Python313\site-packages\github\Requester.py", line 623, in requestJsonAndCheck
+    return self.__check(
+           ~~~~~~~~~~~~^
+        *self.requestJson(
+        ^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\gadda\AppData\Roaming\Python\Python313\site-packages\github\Requester.py", line 853, in __check
+    raise self.createException(status, responseHeaders, data)
+github.GithubException.UnknownObjectException: 404 {"message": "Not Found", "documentation_url": "https://docs.github.com/rest", "status": "404"}
+2026-03-06 00:12:46,471 | ERROR | Attendence.clients | clients.py:42 | create_github_repo() | Failed to create GitHub repo client
+Traceback (most recent call last):
+  File "C:\Users\gadda\OneDrive\Desktop\projects\gen_attendence\Attendence\clients.py", line 39, in create_github_repo
+    repo = gh.get_user(username).get_repo(repo_name)
+           ~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\gadda\AppData\Roaming\Python\Python313\site-packages\github\MainClass.py", line 413, in get_user
+    return github.NamedUser.NamedUser(self.__requester, url=url).complete()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gadda\AppData\Roaming\Python\Python313\site-packages\github\GithubObject.py", line 569, in __init__
+    self.complete()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\gadda\AppData\Roaming\Python\Python313\site-packages\github\GithubObject.py", line 601, in complete
+    self._completeIfNeeded()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\gadda\AppData\Roaming\Python\Python313\site-packages\github\GithubObject.py", line 610, in _completeIfNeeded
+    self.__complete()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\gadda\AppData\Roaming\Python\Python313\site-packages\github\GithubObject.py", line 615, in __complete
+    headers, data = self._requester.requestJsonAndCheck("GET", self._url.value, headers=self.__completeHeaders)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gadda\AppData\Roaming\Python\Python313\site-packages\github\Requester.py", line 623, in requestJsonAndCheck
+    return self.__check(
+           ~~~~~~~~~~~~^
+        *self.requestJson(
+        ^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\gadda\AppData\Roaming\Python\Python313\site-packages\github\Requester.py", line 853, in __check
+    raise self.createException(status, responseHeaders, data)
+github.GithubException.UnknownObjectException: 404 {"message": "Not Found", "documentation_url": "https://docs.github.com/rest", "status": "404"}

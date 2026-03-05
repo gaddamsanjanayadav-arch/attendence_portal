@@ -1,8 +1,7 @@
 streamlit
+supabase
 pandas
 python-dotenv
 pytz
-supabase
 requests
 PyGithub
-typing_extensions
