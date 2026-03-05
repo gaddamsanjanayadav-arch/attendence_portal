@@ -1,10 +1,12 @@
 # Attendence/clients.py
+
 from supabase import create_client
 from github import Github
 from .config import get_env
 from .logger import get_logger
 
 logger = get_logger(__name__)
+
 
 def create_supabase_client():
     """
@@ -13,17 +15,21 @@ def create_supabase_client():
     try:
         url = get_env("SUPABASE_URL")
         key = get_env("SUPABASE_KEY")
+
         if not url or not key:
             raise RuntimeError("SUPABASE_URL / SUPABASE_KEY are not set.")
+
         client = create_client(url, key)
         return client
-    except Exception as e:
+
+    except Exception:
         logger.exception("Failed to create Supabase client")
         raise
 
+
 def create_github_repo():
     """
-    Create and return a (Github, repo) tuple. 
+    Create and return a (Github, repo) tuple.
     If GitHub settings are not provided, returns (None, None).
     """
     try:
@@ -36,8 +42,13 @@ def create_github_repo():
             return None, None
 
         gh = Github(token)
-        repo = gh.get_user(username).get_repo(repo_name)
+
+        # safer repository access
+        repo_full_name = f"{username}/{repo_name}"
+        repo = gh.get_repo(repo_full_name)
+
         return gh, repo
+
     except Exception:
         logger.exception("Failed to create GitHub repo client")
         raise
